@@ -1,31 +1,66 @@
 import React, { useState } from "react";
-// import { Form, Select, Direction, Box } from "../styles/Styles";
-import Pancakes from "../images/Pancakes.png";
+import { Box, Form, Small, Button, Select, Course } from "../styles/Styles.js";
+import Pancakes from "../images/Pancakes.svg";
+import Waffles from "../images/Waffles.svg";
 
-const MainForm = () => {
+const MainForm = (props) => {
   const options = [
-    {value: '', text: 'Choose Something', image: Pancakes },
-    {value: 'Pancakes', text: 'Pancakes'},
-    {value: 'Waffles', text: 'Waffles'}
+    { value: "", text: "Choose Something" },
+    { value: "Pancakes", text: "Pancakes" },
+    { value: "Waffles", text: "Waffles" },
   ];
 
   const [selected, setSelected] = useState(options[0].value);
+  const [pancakeTruth, setPancakeTruth] = useState(false);
+  const [waffleTruth, setWaffleTruth] = useState(false);
 
-  const handleChange = event => {
-    console.log(event.target.value);
-    setSelected(event.target.image);
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+  };
+
+  const imageShow = (event) => {
+    if (selected === "Pancakes") {
+      setWaffleTruth(false);
+      setPancakeTruth(true);
+    } else if (selected === "Waffles") {
+      setPancakeTruth(false);
+      setWaffleTruth(true);
+    }
   };
 
   return (
     <div>
-      <select value={selected} onChange={handleChange}>
-        {options.map(option =>(
+      <Form>
+        <Box>
+       <h1 style={{display:'flex', justifyContent:'left'}}>Main Item</h1>
+      <Select value={selected} onChange={handleChange}>
+        {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.text}
-          </option> 
+          </option>
         ))}
-      </select>
-      {selected} {options.image}
+      </Select>
+      <Button onClick={imageShow}>Select Item</Button>
+      {pancakeTruth && (
+        <Small>
+          <img
+            src={Pancakes}
+            alt="myPancakes"
+            style={{ width: 100, height: 50 }}
+          />
+        </Small>
+      )}
+      {waffleTruth && (
+        <Small>
+          <img
+            src={Waffles}
+            alt="myWaffles"
+            style={{ width: 100, height: 50 }}
+          />
+        </Small>
+      )}
+      </Box>
+      </Form>
     </div>
   );
 };
