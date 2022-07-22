@@ -23,23 +23,23 @@ const MainForm = (props) => {
   const mainOptions = [
     { value: "", text: "Choose Something" },
     { value: "Nothing", text: "Nothing" },
-    { value: "Pancakes", text: "Pancakes", image: Pancakes },
-    { value: "Waffles", text: "Waffles", image: Waffles },
-    { value: "Burger", text: "Burger", image: Burger },
-    { value: "Salad", text: "Salad", image: Salad },
+    { value: "Pancakes", text: "Pancakes", image: Pancakes, price: "$2.00" },
+    { value: "Waffles", text: "Waffles", image: Waffles, price: "$2.00" },
+    { value: "Burger", text: "Burger", image: Burger, price: "$3.50" },
+    { value: "Salad", text: "Salad", image: Salad, price: "$1.75" },
   ];
 
   const sideOptions = [
     { value: "", text: "Choose Something" },
     { value: "Nothing", text: "Nothing" },
-    { value: "Eggs", text: "Eggs", image: Egg },
-    { value: "Hashbrowns", text: "Hashbrowns", image: HashBrown },
-    { value: "Cookies", text: "Cookies", image: Cookies },
-    { value: "Orange", text: "Orange", image: Orange },
-    { value: "Toast", text: "Toast", image: Toast },
-    { value: "Fries", text: "Fries", image: Fries },
-    { value: "Crossaint", text: "Crossaint", image: Crossaint },
-    { value: "Donut", text: "Donut", image: Donut },
+    { value: "Eggs", text: "Eggs", image: Egg, price: "$1.25" },
+    { value: "Hashbrowns", text: "Hashbrowns", image: HashBrown, price: "$1.00"},
+    { value: "Cookies", text: "Cookies", image: Cookies, price: "$1.00" },
+    { value: "Orange", text: "Orange", image: Orange, price: "$.30" },
+    { value: "Toast", text: "Toast", image: Toast, price: "$.50" },
+    { value: "Fries", text: "Fries", image: Fries, price: "$2.00" },
+    { value: "Crossaint", text: "Crossaint", image: Crossaint, price: "$2.80" },
+    { value: "Donut", text: "Donut", image: Donut, price: "$1.00" },
   ];
 
   const drinkOptions = [
@@ -93,6 +93,7 @@ const MainForm = (props) => {
           <Small>
             <img style={{ width: 50 }} src={mainOptions[mainSelected].image} />
           </Small>
+            <p style={{ width: 50 }}>{mainOptions[mainSelected].price}</p>
           {/* Side Course */}
           <h1
             style={{
@@ -113,6 +114,7 @@ const MainForm = (props) => {
           <Small>
             <img style={{ width: 50 }} src={sideOptions[sideSelected].image} />
           </Small>
+            <p style={{ width: 50 }}>{sideOptions[sideSelected].price}</p>
           {/* Drink Course */}
           <h1
             style={{

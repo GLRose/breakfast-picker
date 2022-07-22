@@ -1,13 +1,14 @@
 import './App.css';
 import React from 'react';
 import Title from './components/Title';
-import MainForm from './components/MainForm';
+// import MainForm from './components/MainForm';
+import Items from './components/Items';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <Title/>
-      <MainForm/>
+      <Items/>
     </div>
   );
 }
