@@ -1,7 +1,7 @@
 {
   "main.css": "/breakfast-picker/static/css/main.d26a680a.chunk.css",
-  "main.js": "/breakfast-picker/static/js/main.992a69e1.chunk.js",
-  "main.js.map": "/breakfast-picker/static/js/main.992a69e1.chunk.js.map",
+  "main.js": "/breakfast-picker/static/js/main.08949e6a.chunk.js",
+  "main.js.map": "/breakfast-picker/static/js/main.08949e6a.chunk.js.map",
   "static/js/1.106de87e.chunk.js": "/breakfast-picker/static/js/1.106de87e.chunk.js",
   "static/js/1.106de87e.chunk.js.map": "/breakfast-picker/static/js/1.106de87e.chunk.js.map",
   "runtime~main.js": "/breakfast-picker/static/js/runtime~main.dd1b8cba.js",
@@ -26,6 +26,6 @@
   "static/media/Donut.png": "/breakfast-picker/static/media/Donut.164c6e3c.png",
   "static/css/main.d26a680a.chunk.css.map": "/breakfast-picker/static/css/main.d26a680a.chunk.css.map",
   "index.html": "/breakfast-picker/index.html",
-  "precache-manifest.d5c96979ae36314c98aaf5847408e936.js": "/breakfast-picker/precache-manifest.d5c96979ae36314c98aaf5847408e936.js",
+  "precache-manifest.0b256a9ab3a2c526a667b6ba4800548d.js": "/breakfast-picker/precache-manifest.0b256a9ab3a2c526a667b6ba4800548d.js",
   "service-worker.js": "/breakfast-picker/service-worker.js"
 }
