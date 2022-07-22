@@ -1,9 +1,11 @@
 import React from 'react'
+import { Course } from "../styles/Styles.js";
 
-const Title = () => {
+const Title = ({name}) => {
+  console.log(name);
   return (
     <div>
-      <h1>Breakfast Picker</h1>
+        <Course>Breakfast Picker {name}</Course>
     </div>
   )
 }
