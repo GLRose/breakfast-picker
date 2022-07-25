@@ -15,14 +15,13 @@ export const Form = styled.div`
 
 export const Box = styled.div`
   width: 650px;
-  // height: 300px;
   border: 10px solid #a5d5d5;
   border-radius: 20px;
 `;
 
-export const Direction = styled.div` 
-  flex-direction: column;
-`;
+// export const Direction = styled.div` 
+//   flex-direction: column;
+// `;
 export const Select = styled.select`
 
 background-color: pink;

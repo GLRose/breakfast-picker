@@ -22,40 +22,46 @@ import Donut from "../images/Donut.png";
 const MainForm = (props) => {
   const mainOptions = [
     { value: "", text: "Choose Something" },
-    { value: "Nothing", text: "Nothing" },
-    { value: "Pancakes", text: "Pancakes", image: Pancakes, price: "$2.00" },
-    { value: "Waffles", text: "Waffles", image: Waffles, price: "$2.00" },
-    { value: "Burger", text: "Burger", image: Burger, price: "$3.50" },
-    { value: "Salad", text: "Salad", image: Salad, price: "$1.75" },
+    { value: "Nothing", text: "Nothing", price: 0 },
+    { value: "Pancakes", text: "Pancakes", image: Pancakes, price: 2.0 },
+    { value: "Waffles", text: "Waffles", image: Waffles, price: 2.0 },
+    { value: "Burger", text: "Burger", image: Burger, price: 3.5 },
+    { value: "Salad", text: "Salad", image: Salad, price: 2.5 },
   ];
 
   const sideOptions = [
     { value: "", text: "Choose Something" },
-    { value: "Nothing", text: "Nothing" },
-    { value: "Eggs", text: "Eggs", image: Egg, price: "$1.25" },
-    { value: "Hashbrowns", text: "Hashbrowns", image: HashBrown, price: "$1.00"},
-    { value: "Cookies", text: "Cookies", image: Cookies, price: "$1.00" },
-    { value: "Orange", text: "Orange", image: Orange, price: "$.30" },
-    { value: "Toast", text: "Toast", image: Toast, price: "$.50" },
-    { value: "Fries", text: "Fries", image: Fries, price: "$2.00" },
-    { value: "Crossaint", text: "Crossaint", image: Crossaint, price: "$2.80" },
-    { value: "Donut", text: "Donut", image: Donut, price: "$1.00" },
+    { value: "Nothing", text: "Nothing", price: 0 },
+    { value: "Eggs", text: "Eggs", image: Egg, price: 2.0 },
+    { value: "Hashbrowns", text: "Hashbrowns", image: HashBrown, price: 1.25 },
+    { value: "Cookies", text: "Cookies", image: Cookies, price: 1.5 },
+    { value: "Orange", text: "Orange", image: Orange, price: 0.3 },
+    { value: "Toast", text: "Toast", image: Toast, price: 0.5 },
+    { value: "Fries", text: "Fries", image: Fries, price: 3.0 },
+    { value: "Crossaint", text: "Crossaint", image: Crossaint, price: 4.0 },
+    { value: "Donut", text: "Donut", image: Donut, price: 1.0 },
   ];
 
   const drinkOptions = [
     { value: "", text: "Choose Something" },
-    { value: "Nothing", text: "Nothing" },
-    { value: "Tea", text: "Tea", image: Tea },
-    { value: "Milk", text: "Milk", image: Milk },
-    { value: "Coffee", text: "Coffee", image: Coffee },
-    { value: "Coke", text: "Coke", image: Coke },
-    { value: "OrangeJuice", text: "OrangeJuice", image: OrangeJuice },
-    { value: "Milkshake", text: "Milkshake", image: Milkshake },
+    { value: "Nothing", text: "Nothing", price: 0 },
+    { value: "Tea", text: "Tea", image: Tea, price: 1.9 },
+    { value: "Milk", text: "Milk", image: Milk, price: 1.0 },
+    { value: "Coffee", text: "Coffee", image: Coffee, price: 1.25 },
+    { value: "Coke", text: "Coke", image: Coke, price: 1.25 },
+    {
+      value: "OrangeJuice",
+      text: "OrangeJuice",
+      image: OrangeJuice,
+      price: 1.5,
+    },
+    { value: "Milkshake", text: "Milkshake", image: Milkshake, price: 4.0 },
   ];
 
   const [mainSelected, setMainSelected] = useState(0);
   const [sideSelected, setSideSelected] = useState(0);
   const [drinkSelected, setDrinkSelected] = useState(0);
+  const [count, setCount] = useState("");
 
   const mainHandleChange = (event) => {
     setMainSelected(event.target.value);
@@ -69,18 +75,20 @@ const MainForm = (props) => {
     setDrinkSelected(event.target.value);
   };
 
+  const total = () => {
+    let final =
+      mainOptions[mainSelected].price +
+      sideOptions[sideSelected].price +
+      drinkOptions[drinkSelected].price;
+    setCount(final.toFixed(2));
+  };
+
   return (
     <div>
       <Form>
         <Box>
           {/* Main Course */}
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "left",
-              fontFamily: "Edu TAS Beginner",
-            }}
-          >
+          <h1 style={{ display: "flex", justifyContent: "left", fontFamily: "Edu TAS Beginner",}}>
             Main Item
           </h1>
           <Select onChange={mainHandleChange}>
@@ -90,18 +98,13 @@ const MainForm = (props) => {
               </option>
             ))}
           </Select>
-          <Small>
-            <img style={{ width: 50 }} src={mainOptions[mainSelected].image} />
+          <Small> 
+            <img alt="" style={{ width: 50 }} src={mainOptions[mainSelected].image}/>
           </Small>
-            <p style={{ width: 50 }}>{mainOptions[mainSelected].price}</p>
+          <p style={{ width: 50 }}>{mainOptions[mainSelected].price}</p>
+
           {/* Side Course */}
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "left",
-              fontFamily: "Edu TAS Beginner",
-            }}
-          >
+          <h1 style={{display: "flex",justifyContent: "left", fontFamily: "Edu TAS Beginner",}}>
             Side Item
           </h1>
           <Select onChange={sideHandleChange}>
@@ -111,18 +114,12 @@ const MainForm = (props) => {
               </option>
             ))}
           </Select>
-          <Small>
-            <img style={{ width: 50 }} src={sideOptions[sideSelected].image} />
+          <Small> 
+            <img alt="" style={{ width: 50 }} src={sideOptions[sideSelected].image}/>
           </Small>
-            <p style={{ width: 50 }}>{sideOptions[sideSelected].price}</p>
+          <p style={{ width: 50 }}>{sideOptions[sideSelected].price}</p>
           {/* Drink Course */}
-          <h1
-            style={{
-              display: "flex",
-              justifyContent: "left",
-              fontFamily: "Edu TAS Beginner",
-            }}
-          >
+          <h1 style={{display: "flex",justifyContent: "left", fontFamily: "Edu TAS Beginner",}}>
             Drink Item
           </h1>
           <Select onChange={drinkHandleChange}>
@@ -133,11 +130,11 @@ const MainForm = (props) => {
             ))}
           </Select>
           <Small>
-            <img
-              style={{ width: 50 }}
-              src={drinkOptions[drinkSelected].image}
-            />
+            <img alt="" style={{ width: 50 }} src={drinkOptions[drinkSelected].image}/>
           </Small>
+          <p style={{ width: 50 }}>{drinkOptions[drinkSelected].price}</p>
+          <button onClick={total}>Total</button>
+          <p>{`$ ${count}`}</p>
         </Box>
       </Form>
     </div>
