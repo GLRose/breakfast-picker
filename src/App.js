@@ -1,13 +1,13 @@
 import './App.css';
 import React from 'react';
 import Title from './components/Title';
-import Items from './components/Items';
+import SubTotal from './components/SubTotal';
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <Title/>
-      <Items/>
+      <SubTotal/>
     </div>
   );
 }

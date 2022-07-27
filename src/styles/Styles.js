@@ -19,11 +19,7 @@ export const Box = styled.div`
   border-radius: 20px;
 `;
 
-// export const Direction = styled.div` 
-//   flex-direction: column;
-// `;
 export const Select = styled.select`
-
 background-color: pink;
 border-style: none;
 color: black;
