@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "dabc3c9a6af7545068c3",
+    "revision": "eabfc92aca26c765639d",
     "url": "/breakfast-picker/static/css/main.d26a680a.chunk.css"
   },
   {
-    "revision": "dabc3c9a6af7545068c3",
-    "url": "/breakfast-picker/static/js/main.dabc3c9a.chunk.js"
+    "revision": "eabfc92aca26c765639d",
+    "url": "/breakfast-picker/static/js/main.eabfc92a.chunk.js"
   },
   {
     "revision": "7558813273ad323b8f0e",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/breakfast-picker/static/media/Milkshake.faebb150.png"
   },
   {
-    "revision": "daf5626c0181a54b64230a709f3c5241",
+    "revision": "fddbdd27b08a5c6d5f06469e3f158245",
     "url": "/breakfast-picker/index.html"
   }
 ];
