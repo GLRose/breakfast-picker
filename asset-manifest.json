@@ -1,9 +1,9 @@
 {
   "main.css": "/breakfast-picker/static/css/main.d26a680a.chunk.css",
-  "main.js": "/breakfast-picker/static/js/main.aaf45b1a.chunk.js",
-  "main.js.map": "/breakfast-picker/static/js/main.aaf45b1a.chunk.js.map",
-  "static/js/1.d3464231.chunk.js": "/breakfast-picker/static/js/1.d3464231.chunk.js",
-  "static/js/1.d3464231.chunk.js.map": "/breakfast-picker/static/js/1.d3464231.chunk.js.map",
+  "main.js": "/breakfast-picker/static/js/main.dabc3c9a.chunk.js",
+  "main.js.map": "/breakfast-picker/static/js/main.dabc3c9a.chunk.js.map",
+  "static/js/1.75588132.chunk.js": "/breakfast-picker/static/js/1.75588132.chunk.js",
+  "static/js/1.75588132.chunk.js.map": "/breakfast-picker/static/js/1.75588132.chunk.js.map",
   "runtime~main.js": "/breakfast-picker/static/js/runtime~main.dd1b8cba.js",
   "runtime~main.js.map": "/breakfast-picker/static/js/runtime~main.dd1b8cba.js.map",
   "static/media/Pancakes.svg": "/breakfast-picker/static/media/Pancakes.48f00d5c.svg",
@@ -26,6 +26,6 @@
   "static/media/Milkshake.png": "/breakfast-picker/static/media/Milkshake.faebb150.png",
   "static/css/main.d26a680a.chunk.css.map": "/breakfast-picker/static/css/main.d26a680a.chunk.css.map",
   "index.html": "/breakfast-picker/index.html",
-  "precache-manifest.b090e891f1477460922dd0b89f7f75dd.js": "/breakfast-picker/precache-manifest.b090e891f1477460922dd0b89f7f75dd.js",
+  "precache-manifest.891c143d58082e392599b91a6e69280c.js": "/breakfast-picker/precache-manifest.891c143d58082e392599b91a6e69280c.js",
   "service-worker.js": "/breakfast-picker/service-worker.js"
 }

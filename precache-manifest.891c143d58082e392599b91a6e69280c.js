@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "aaf45b1aa1f87cd37624",
+    "revision": "dabc3c9a6af7545068c3",
     "url": "/breakfast-picker/static/css/main.d26a680a.chunk.css"
   },
   {
-    "revision": "aaf45b1aa1f87cd37624",
-    "url": "/breakfast-picker/static/js/main.aaf45b1a.chunk.js"
+    "revision": "dabc3c9a6af7545068c3",
+    "url": "/breakfast-picker/static/js/main.dabc3c9a.chunk.js"
   },
   {
-    "revision": "d34642318421a6026858",
-    "url": "/breakfast-picker/static/js/1.d3464231.chunk.js"
+    "revision": "7558813273ad323b8f0e",
+    "url": "/breakfast-picker/static/js/1.75588132.chunk.js"
   },
   {
     "revision": "dd1b8cbae6df071f0b4a",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/breakfast-picker/static/media/Milkshake.faebb150.png"
   },
   {
-    "revision": "ef6d1c50e3a00f0cf8e13de7c1f71a21",
+    "revision": "daf5626c0181a54b64230a709f3c5241",
     "url": "/breakfast-picker/index.html"
   }
 ];
