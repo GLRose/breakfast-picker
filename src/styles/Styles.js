@@ -29,7 +29,6 @@ flex-shrink: 0;
 font-size: 17px;
 font-weight: 500;
 height: 3rem;
-text-align: center;
 border: 3px solid  #a5d5d5;
 border-radius: 10px;
 `;
@@ -54,4 +53,17 @@ height: 3rem;
 text-align: center;
 border-radius: 10px;
 margin: 2px;
+`;
+
+export const BlackHeaders = styled.h1`
+background-color: #a5d5d5;
+color: black;
+font-family: 'Edu TAS Beginner', cursive;
+border-radius: 5px;
+margin: 0 auto 0 auto;
+width: 145px;
+height: 36px;
+margin-bottom: 10px;
+text-align: center;
+font-size: 26px;
 `;

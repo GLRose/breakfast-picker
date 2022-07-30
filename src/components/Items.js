@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Form, Small, Select } from "../styles/Styles.js";
+import { Box, Form, Small, Select, BlackHeaders, Sized } from "../styles/Styles.js";
 import Pancakes from "../images/Pancakes.svg";
 import Waffles from "../images/Waffles.png";
 import Burger from "../images/Burger.png";
@@ -185,6 +185,15 @@ const MainItem = () => {
   useEffect(() => {
     if(mainSelected && sideSelected && drinkSelected){
       sumCart();
+    }else if(mainSelected){
+      total = mainOptions[mainSelected].price
+      sumCart();
+    }else if(sideSelected){
+      total = sideOptions[sideSelected].price
+      sumCart();
+    }else if(drinkSelected){
+      total = drinkOptions[drinkSelected].price
+      sumCart();
     }
   }, [mainSelected,sideSelected,drinkSelected])
 
@@ -217,7 +226,7 @@ const MainItem = () => {
               src={mainOptions[mainSelected].image}
             />
           </Small>
-          <p style={{ width: 50 }}>{`$`}{mainOptions[mainSelected].price}</p>
+          <h3 style={{ width: 50 }}>{`$`}{mainOptions[mainSelected].price}</h3>
 
           {/* Side Course */}
           <h1
@@ -243,7 +252,7 @@ const MainItem = () => {
               src={sideOptions[sideSelected].image}
             />
           </Small>
-          <p style={{ width: 50 }}>{`$`}{sideOptions[sideSelected].price}</p>
+          <h3 style={{ width: 50 }}>{`$`}{sideOptions[sideSelected].price}</h3>
 
           {/* Drink Course */}
           <h1
@@ -269,10 +278,11 @@ const MainItem = () => {
               src={drinkOptions[drinkSelected].image}
             />
           </Small>
-          <p style={{ width: 50 }}>{`$`}{drinkOptions[drinkSelected].price}</p>
+          <h3 style={{ width: 50 }}>{`$`}{drinkOptions[drinkSelected].price}</h3>
+          <BlackHeaders>{`Total: $${cart}`}</BlackHeaders> 
         </Box>
       </Form>
-      {`Total: $${cart}`}
+    
     </div>   
   );
 };
