@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Form, Small, Select, BlackHeaders, Sized } from "../styles/Styles.js";
+import {Box, Form, Small, Select,BlackHeaders} from "../styles/Styles.js";
 import Pancakes from "../images/Pancakes.svg";
 import Waffles from "../images/Waffles.png";
 import Burger from "../images/Burger.png";
@@ -21,14 +21,15 @@ import Milkshake from "../images/Milkshake.png";
 
 const MainItem = () => {
   const mainOptions = [
-    { 
+    {
       value: "",
-      text: "Choose Something"
+      text: "Choose Something",
     },
-    { 
+    {
       value: "Nothing",
       text: "Nothing",
-      price: 0.0 },
+      price: 0.0,
+    },
     {
       value: "Pancakes",
       text: "Pancakes",
@@ -56,19 +57,21 @@ const MainItem = () => {
   ];
 
   const sideOptions = [
-    { 
+    {
       value: "",
-      text: "Choose Something" 
+      text: "Choose Something",
     },
-    { 
+    {
       value: "Nothing",
       text: "Nothing",
-      price: 0.0 },
-    { 
+      price: 0.0,
+    },
+    {
       value: "Eggs",
       text: "Eggs",
       image: Egg,
-      price: 1.0 },
+      price: 1.0,
+    },
     {
       value: "Hashbrowns",
       text: "Hashbrowns",
@@ -114,25 +117,27 @@ const MainItem = () => {
   ];
 
   const drinkOptions = [
-    { 
+    {
       value: "",
-      text: "Choose Something"
+      text: "Choose Something",
     },
-    { 
+    {
       value: "Nothing",
       text: "Nothing",
-      price: 0.0 },
-    { 
+      price: 0.0,
+    },
+    {
       value: "Tea",
       text: "Tea",
       image: Tea,
-      price: 1.9 ,
+      price: 1.9,
     },
-    { 
+    {
       value: "Milk",
       text: "Milk",
       image: Milk,
-      price: 1.0 },
+      price: 1.0,
+    },
     {
       value: "Coffee",
       text: "Coffee",
@@ -159,11 +164,14 @@ const MainItem = () => {
     },
   ];
 
-
   const [mainSelected, setMainSelected] = useState(0);
   const [sideSelected, setSideSelected] = useState(0);
   const [drinkSelected, setDrinkSelected] = useState(0);
-  let total = mainOptions[mainSelected].price + sideOptions[sideSelected].price + drinkOptions[drinkSelected].price;
+  let total =
+    mainOptions[mainSelected].price +
+    sideOptions[sideSelected].price +
+    drinkOptions[drinkSelected].price;
+
   const [cart, setCart] = useState(0);
 
   const mainHandleChange = (event) => {
@@ -176,26 +184,17 @@ const MainItem = () => {
     setDrinkSelected(event.target.value);
   };
 
-  const sumCart = () => {  
-      setCart(total.toFixed(2));
-      console.log(total.toFixed(2))
+  const sumCart = () => {
+    setCart(total.toFixed(2));
+    console.log(total.toFixed(2));
   };
 
   // calls our function any time one of these variables is messed with
   useEffect(() => {
-    if(mainSelected && sideSelected && drinkSelected){
-      sumCart();
-    }else if(mainSelected){
-      total = mainOptions[mainSelected].price
-      sumCart();
-    }else if(sideSelected){
-      total = sideOptions[sideSelected].price
-      sumCart();
-    }else if(drinkSelected){
-      total = drinkOptions[drinkSelected].price
+    if (mainSelected && sideSelected && drinkSelected) {
       sumCart();
     }
-  }, [mainSelected,sideSelected,drinkSelected])
+  }, [mainSelected, sideSelected, drinkSelected]);
 
   return (
     <div>
@@ -226,7 +225,10 @@ const MainItem = () => {
               src={mainOptions[mainSelected].image}
             />
           </Small>
-          <h3 style={{ width: 50 }}>{`$`}{mainOptions[mainSelected].price}</h3>
+          <h3 style={{ width: 50 }}>
+            {`$`}
+            {mainOptions[mainSelected].price}
+          </h3>
 
           {/* Side Course */}
           <h1
@@ -252,7 +254,10 @@ const MainItem = () => {
               src={sideOptions[sideSelected].image}
             />
           </Small>
-          <h3 style={{ width: 50 }}>{`$`}{sideOptions[sideSelected].price}</h3>
+          <h3 style={{ width: 50 }}>
+            {`$`}
+            {sideOptions[sideSelected].price}
+          </h3>
 
           {/* Drink Course */}
           <h1
@@ -278,12 +283,14 @@ const MainItem = () => {
               src={drinkOptions[drinkSelected].image}
             />
           </Small>
-          <h3 style={{ width: 50 }}>{`$`}{drinkOptions[drinkSelected].price}</h3>
-          <BlackHeaders>{`Total: $${cart}`}</BlackHeaders> 
+          <h3 style={{ width: 50 }}>
+            {`$`}
+            {drinkOptions[drinkSelected].price}
+          </h3>
+          <BlackHeaders>{`Total: $${cart}`}</BlackHeaders>
         </Box>
       </Form>
-    
-    </div>   
+    </div>
   );
 };
 
