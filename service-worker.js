@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/breakfast-picker/precache-manifest.289825fc6fedec42f3e420fff54cadee.js"
+  "/breakfast-picker/precache-manifest.d240ebee257c1ac4d22c721d1d5ebc8f.js"
 );
 
 workbox.clientsClaim();
